@@ -773,6 +773,7 @@ sup {
 }
 
 .heading__textblock {
+  padding-bottom: 50px;
   max-width: 540px;
 }
 
