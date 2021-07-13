@@ -177,6 +177,25 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "../views/blocks/modals/modal-privacy/modal-privacy.js":
+/*!*************************************************************!*\
+  !*** ../views/blocks/modals/modal-privacy/modal-privacy.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _layouts_modal_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @layouts/modal/modal */ "../views/layouts/modal/modal.js");
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  $('.form__personal button').on('click', function () {
+    Object(_layouts_modal_modal__WEBPACK_IMPORTED_MODULE_0__["modalOpen"])(this, true);
+  });
+});
+
+/***/ }),
+
 /***/ "../views/blocks/modals/modal-thx/modal-thx.js":
 /*!*****************************************************!*\
   !*** ../views/blocks/modals/modal-thx/modal-thx.js ***!
@@ -217,6 +236,28 @@ __webpack_require__.r(__webpack_exports__);
   });
   $('.modal__button-close').on('click', function () {
     Object(_layouts_modal_modal__WEBPACK_IMPORTED_MODULE_2__["modalCloseFunc"])();
+  });
+});
+
+/***/ }),
+
+/***/ "../views/layouts/header/header.js":
+/*!*****************************************!*\
+  !*** ../views/layouts/header/header.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  /* Появление меню по кнопке */
+  $('.button-burger').on('click', function () {
+    var expanded = $(this).attr('aria-expanded') === 'true';
+    $(this).attr('aria-expanded', !expanded);
+    $(this).toggleClass('open');
+    $('.header .infoblock').toggleClass('open');
+    $('html').toggleClass('header__open');
   });
 });
 
@@ -303,16 +344,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var focus_visible_dist_focus_visible_min__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(focus_visible_dist_focus_visible_min__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _blocks_modals_modal_form_modal_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @blocks/modals/modal-form/modal-form */ "../views/blocks/modals/modal-form/modal-form.js");
 /* harmony import */ var _blocks_modals_modal_thx_modal_thx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @blocks/modals/modal-thx/modal-thx */ "../views/blocks/modals/modal-thx/modal-thx.js");
-/* harmony import */ var _layouts_modal_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @layouts/modal/modal */ "../views/layouts/modal/modal.js");
+/* harmony import */ var _blocks_modals_modal_privacy_modal_privacy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @blocks/modals/modal-privacy/modal-privacy */ "../views/blocks/modals/modal-privacy/modal-privacy.js");
+/* harmony import */ var _layouts_header_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @layouts/header/header */ "../views/layouts/header/header.js");
+/* harmony import */ var _layouts_modal_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @layouts/modal/modal */ "../views/layouts/modal/modal.js");
 /* полифил для :focus-visible */
 
 
 
 
+
+
 $(function () {
-  Object(_layouts_modal_modal__WEBPACK_IMPORTED_MODULE_3__["modalClose"])();
+  Object(_layouts_modal_modal__WEBPACK_IMPORTED_MODULE_5__["modalClose"])();
+  Object(_blocks_modals_modal_privacy_modal_privacy__WEBPACK_IMPORTED_MODULE_3__["default"])();
   Object(_blocks_modals_modal_form_modal_form__WEBPACK_IMPORTED_MODULE_1__["default"])();
   Object(_blocks_modals_modal_thx_modal_thx__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  Object(_layouts_header_header__WEBPACK_IMPORTED_MODULE_4__["default"])();
 });
 
 /***/ })
