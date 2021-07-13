@@ -167,6 +167,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layouts_modal_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @layouts/modal/modal */ "../views/layouts/modal/modal.js");
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
+  $('.form .input').on('input', function () {
+    $(this).removeClass('invalid');
+  });
   $('.button[data-modal="form"]').on('click', function () {
     Object(_layouts_modal_modal__WEBPACK_IMPORTED_MODULE_0__["modalOpen"])(this);
   });
