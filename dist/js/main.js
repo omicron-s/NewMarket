@@ -237,6 +237,9 @@ __webpack_require__.r(__webpack_exports__);
       Object(_layouts_modal_modal__WEBPACK_IMPORTED_MODULE_2__["modalOpen"])(this);
     }
   });
+  $('.input').on('invalid', function (e) {
+    e.preventDefault();
+  });
   $('.modal__button-close').on('click', function () {
     Object(_layouts_modal_modal__WEBPACK_IMPORTED_MODULE_2__["modalCloseFunc"])();
   });
